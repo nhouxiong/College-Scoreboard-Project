@@ -53,7 +53,7 @@ README.md
 
 - **Loading:** Loaded everything as text first, because numeric columns contain the marker `PS` (privacy suppressed) and the text `NULL`.
 - **Cleaning:** Converted values with `TRY_CAST` so suppressed values become real NULLs, joined the two files on `UNITID`, and trimmed trailing periods from field names.
-- **Value metric:** Median earnings four years after completion divided by median federal debt. Years to repay assumes 10% of annual earnings goes to repayment, with interest ignored.
+- **Value metric:** Median earnings four years after completion divided by median federal debt. Years to repay assumes 10% of annual earnings goes to repayment, with interest ignored. Median earnings of working, not-enrolled graduates four years after completion, divided by median Stafford and Grad PLUS debt.
 - **Minimum group size:** Rankings and comparisons use programs with at least 30 students behind both earnings and debt. Results were checked at minimums of 20 and 50.
 - **De-duplication:** Scorecard repeats an institution's figures on each of its campuses, so I kept one row per institution group, field and credential.
 - **Modeling:** Regressions of log earnings on field, school type, admission rate and Pell share (bachelor's programs), with errors clustered by institution group.
@@ -118,7 +118,7 @@ Questions 2 (field versus school) and 4 (outliers against the national median) a
 
 - Earnings and debt describe students who received federal financial aid, so they may not represent everyone in a program.
 - Programs with few graduates are suppressed, so results lean toward larger programs.
-- Debt reflects federal loans only, and debt and earnings are both only available for undergraduate credentials in this file.
+- Debt reflects Stafford and Grad PLUS federal loans only, so private loans and Parent PLUS loans are not captured, and earnings count only graduates who are working and not enrolled in school.
 - Earnings are measured a fixed number of years after completion and are not adjusted for cost of living.
 - Results show associations, not causes.
 
