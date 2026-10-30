@@ -109,6 +109,9 @@ A four-page Power BI report (`dashboard/scoreboard.pbix`) built on one SQL Serve
 | Public vs Private | Does school type matter? | Median earnings, median debt and earnings per $1 of debt by school type, with program counts |
 | About/Methodology | How was this built? | Question, data source, cleaning steps, metric definitions, key findings and limitations |
 
+![Degree Value](dashboard\DegreeValue.png)
+![Watch List](dashboard\WatchList.png)
+![Public vs Private](dashboard\PublicvsPrivate.png)
 
 Questions 2 (field versus school) and 4 (outliers against the national median) are answered in the Python notebook rather than the dashboard.
 ## Limitations
