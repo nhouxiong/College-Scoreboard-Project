@@ -100,10 +100,17 @@ The repeated campus rows had identical earnings in every group. For-profit progr
 
 ## Dashboard
 
-![Best value programs](dashboard/pg1_best_value.png)
+A four-page Power BI report (`dashboard/scoreboard.pbix`) built on one SQL Server view, with slicers for degree type, field of study, state and school type.
 
-Page 1 ranks the top 25 programs by earnings per dollar of debt for a selected credential level and plots debt against earnings for every program, with slicers for credential, field, state and school type. Pages on public versus private programs and a high-risk watch list are in progress.
+| Page | Question | What it shows |
+| --- | --- | --- |
+| Degree Value | Which programs give the best earnings per dollar of debt? | Ranked table of top programs, plus a scatter plot of debt against earnings for every program |
+| Watch List | Which programs combine high debt with low earnings? | High-risk programs ranked by debt-to-earnings, with the share of programs flagged by school type |
+| Public vs Private | Does school type matter? | Median earnings, median debt and earnings per $1 of debt by school type, with program counts |
+| About/Methodology | How was this built? | Question, data source, cleaning steps, metric definitions, key findings and limitations |
 
+
+Questions 2 (field versus school) and 4 (outliers against the national median) are answered in the Python notebook rather than the dashboard.
 ## Limitations
 
 - Earnings and debt describe students who received federal financial aid, so they may not represent everyone in a program.
@@ -114,6 +121,6 @@ Page 1 ranks the top 25 programs by earnings per dollar of debt for a selected c
 
 ## Next steps
 
-- Finish the dashboard pages for school type and high-risk programs.
-- Rerun the state-level analysis on the de-duplicated data to measure how much location adds.
-- Check whether other debt columns cover graduate programs.
+- Rerun the state-level analysis on the de-duplicated data to measure how much location adds beyond field and school type.
+- Check whether other debt columns cover graduate programs, which would extend the value analysis beyond undergraduate credentials.
+- Add a page comparing programs to their national field median (question 4).
